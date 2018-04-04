@@ -9,7 +9,7 @@ class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <UserCamera />
+        
         <Text>Will LIkes Oranges</Text>
         <Text>Hot Dog no Hot dog .</Text>
         <Button 
