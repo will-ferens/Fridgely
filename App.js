@@ -1,18 +1,35 @@
 import React from "react"
-import { StyleSheet, Text, View } from "react-native"
+import { StyleSheet, Text, View, Button } from "react-native"
 import UserCamera from "./components/UserCamera"
-export default class App extends React.Component {
+import { StackNavigator } from 'react-navigation'
+
+
+
+class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <UserCamera />
         <Text>Will LIkes Oranges</Text>
         <Text>Hot Dog no Hot dog .</Text>
-        <Text>Shaun is a bitch your phone to open the developer menu.</Text>
+        <Button 
+          title="Get Started"
+          onPress={() => this.props.navigation.navigate('UserCamera')}
+        />
       </View>
     );
   }
 }
+
+export default StackNavigator ({
+  Home: {
+    screen: App,
+  },
+  UserCamera: {
+    screen: UserCamera,
+  },
+})
+
 
 const styles = StyleSheet.create({
   container: {
