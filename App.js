@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, Text, View, Button } from "react-native"
+import { StyleSheet, Text, View, Button, Image } from "react-native"
 import UserCamera from "./components/UserCamera"
 import { StackNavigator } from 'react-navigation'
 
@@ -9,10 +9,9 @@ class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        
-        <Text>Will LIkes Oranges</Text>
-        <Text>Hot Dog no Hot dog .</Text>
-        <Button 
+        <Text>Welcome To</Text>
+        <Image style={{flex: 0.7, height: "100%", width: "75%"}} source={require("./fridgely-icon.png")}/>
+        <Button
           title="Get Started"
           onPress={() => this.props.navigation.navigate('UserCamera')}
         />
@@ -34,7 +33,7 @@ export default StackNavigator ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ff12",
+    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
